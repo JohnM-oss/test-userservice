@@ -337,12 +337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JohnM-oss/userservice.git",
-                "reference": "f06fc7954a4399fadc43d56a6d5bbefa69ae601d"
+                "reference": "14880fa3f1f8b4a43f5fd12192484b7aaf3b3f3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JohnM-oss/userservice/zipball/f06fc7954a4399fadc43d56a6d5bbefa69ae601d",
-                "reference": "f06fc7954a4399fadc43d56a6d5bbefa69ae601d",
+                "url": "https://api.github.com/repos/JohnM-oss/userservice/zipball/14880fa3f1f8b4a43f5fd12192484b7aaf3b3f3b",
+                "reference": "14880fa3f1f8b4a43f5fd12192484b7aaf3b3f3b",
                 "shasum": ""
             },
             "require": {
@@ -351,6 +351,8 @@
                 "php": "^8.4"
             },
             "require-dev": {
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-phpunit": "^2.0",
                 "phpunit/phpunit": "^11.2"
             },
             "default-branch": true,
@@ -368,6 +370,18 @@
             "scripts": {
                 "test": [
                     "phpunit"
+                ],
+                "stan": [
+                    "phpstan analyse"
+                ],
+                "stan:max": [
+                    "phpstan analyse --level=max"
+                ],
+                "stan:gen-baseline": [
+                    "phpstan analyse --generate-baseline"
+                ],
+                "stan:clear": [
+                    "rm -rf var/phpstan || rmdir /S /Q var\\phpstan"
                 ]
             },
             "license": [
@@ -378,7 +392,7 @@
                 "source": "https://github.com/JohnM-oss/userservice/tree/main",
                 "issues": "https://github.com/JohnM-oss/userservice/issues"
             },
-            "time": "2025-09-13T17:40:55+00:00"
+            "time": "2025-09-13T18:24:07+00:00"
         },
         {
             "name": "psr/http-client",
