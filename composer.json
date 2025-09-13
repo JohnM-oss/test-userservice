@@ -1,0 +1,15 @@
+{
+  "name": "johnm-oss/test-userservice",
+  "description": "Test my user service",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/JohnM-oss/userservice"
+    }
+  ],
+  "require": {
+    "johnm-oss/userservice": "dev-main"
+  }
+}
